@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - prints to standard error
+ * main - prints to the standard error
  *
  * Return: returns 1
  */
