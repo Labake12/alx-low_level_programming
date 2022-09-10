@@ -2,13 +2,13 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main- Entry point
+ * main- check if postive, zero or negative
  *
  * Return: zero
  */
 int main(void)
 {
-	int n;
+	int n; /* Declaring statement */
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
