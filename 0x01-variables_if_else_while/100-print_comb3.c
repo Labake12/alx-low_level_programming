@@ -9,18 +9,29 @@
 int main(void)
 
 {
-	int i;
+	int c = 0;
+	int first_digit;
+	int second_digit;
 
-	for (i = 0, i <= 99, i++)
+	while (c <= 99)
 	{
-		putchar((i / 10) + '0');
-		putchar((i % 10) + '0');
-		if (i == 99)
-			break;
-		putchar(',');
-		putchar(' ');
+		first_digit = ((c / 10) + '0');
+		second_digit = ((c % 10) + '0');
+
+		if (first_digit < second_digit)
+		{
+			putchar(first_digit);
+			putchar(second_digit);
+
+			if (c !=  99)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
+		c++;
 	}
-	putchar('\n')
-	
+	putchar('\n');
+
 	return (0);
 }
