@@ -11,17 +11,17 @@ int main(void)
 	int second;
 	int third;
 
-	for (first = 48; first <= 57; first++)
+	for (first = 0; first < 9; first++)
 	{
-		(second = first + 1; second <= 57; second++)
+		for (second = first + 1; second <= 10; second++)
 		{
-			(third = second + 1; third <= 57; third++)
+			for (third = second + 1; third <= 10; third++)
 			{
 				putchar(first);
 				putchar(second);
 				putchar(third);
 
-				if ((first == 55) && (second == first + 1) && (third == second + 1))
+				if ((first == 7) && (second == first + 1) && (third == second + 1))
 				{
 					break;
 				}
