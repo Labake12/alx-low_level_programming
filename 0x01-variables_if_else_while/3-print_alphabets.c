@@ -6,29 +6,22 @@
  *
  * main - print alphabet in upper and lower
  *
- * Return: zero
+ * Return: Always 0 (Success)
  */
-
 int main(void)
-
 {
+	char lower_case;
+	char upper_case;
 
-	char ch;
+	for (lower_case = 'a', lower_case <= 'z', lower_case++)
+	{
+		putchar(lower_case);
+	}
+	for (upper_case = 'A', upper_case <= 'Z', upper_case++)
+	{
+		putchar(upper_case);
+	}
 
-	char CH;
-
-
-
-	for (ch = 'a'; ch <= 'z'; ch++)
-
-		putchar(ch);
-
-	for (CH = 'A'; CH <= 'Z'; CH++)
-
-		putchar(CH);
-
-		putchar('\n');
-
-  return (0);
-
+	putchar('\n');
+	return (0);
 }
