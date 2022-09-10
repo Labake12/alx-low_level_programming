@@ -3,7 +3,6 @@
 
 
 /**
- *
  * main - print alphabet in upper and lower
  *
  * Return: Always 0 (Success)
