@@ -6,17 +6,17 @@
  */
 int main(void)
 {
-	char lower_case;
-	char upper_case;
+	char ch;
+	char CH;
 	/* to lowercase */
-	for(lower_case = 'a', lower_case <= 'z', lower_case++)
+	for(ch = 'a', ch <= 'z', ch++)
 	{
-		putchar(lower_case);
+		putchar(ch);
 	}
 	/* to uppercase */
-	for(upper_case = 'A', upper_case <= 'Z', upper_case++)
+	for(CH = 'A', CH <= 'Z', CH++)
 	{
-		putchar(upper_case);
+		putchar(CH);
 	}
 	/* new line */
 	putchar('\n');
