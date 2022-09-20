@@ -32,7 +32,7 @@ int _atoi(char *s)
 				l = (s[i] - '0') * -1;
 		}
 	}
-	if (n < 0)
+	if (m < 0)
 		l *= -1;
 
 	return (l);
