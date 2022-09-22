@@ -8,34 +8,34 @@
 
 char *cap_string(char *str)
 {
-	int i;
+	int i, c;
+	int call;
+	char nots[] = ",;.!?(){}\n\t\" ";
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0, call = 0; str[i] != '\0'; i++)
 	{
-		if (i == 0)
+		if (str[0] > 96 && str[0] < 123)
+			call = 1;
+		for (c = 0; nots[c] != '\0'; c++)
 		{
-			if ((str[i] >= 97 && str[i] <= 122))
-			{
-				str[i] = str[i] - 32;
-				continue;
-			}
+			if (nots[c] == str[i])
+				call = 1;
 		}
-		else if (str[i] == ' ')
+
+		if (call)
 		{
-			i++;
-			if (str[i] >= 97 && str[i] <= 122)
+			if (str[i] > 96 && str[i] < 123)
 			{
-				str[i] = str[i] - 32;
-				continue;
+				str[i] -= 32;
+				call = 0;
 			}
-		}
-		else
-		{
-			if (str[i] >= 65 && str[i] <= 90)
-			{
-				str[i] = str[i] + 32;
-			}
+			else if (str[i] > 64 && str[i] < 91)
+				call = 0;
+			else if (str[i] > 47 && str[i] < 58)
+				call = 0;
 		}
 	}
 	return (str);
 }
+
+
