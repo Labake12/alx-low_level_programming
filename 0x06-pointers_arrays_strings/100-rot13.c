@@ -17,7 +17,7 @@ char *rot13(char *str)
 		x = 0;
 		while (letters[x] != '\0')
 		{
-			if (str[count] == lettrs[x])
+			if (str[count] == letters[x])
 			{
 				str[count] = rot13[x];
 				break;
