@@ -7,7 +7,7 @@
  *
  * Return: pointer to byte in s that matches or NULL if not
  */
-char *_strpbrk(char *s, char *accept);
+char *_strpbrk(char *s, char *accept)
 {
 	int index;
 
